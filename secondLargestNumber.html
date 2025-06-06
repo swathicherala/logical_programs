@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hi</h1>
+    <script>
+        console.log('Hello')
+       function secondLagestNumber(arrayNumber){
+        let max1=0, max2=0
+        if(arrayNumber[0]>arrayNumber[1]){
+            max1=arrayNumber[0]
+            max2=arrayNumber[1]
+        }else{
+            max1=arrayNumber[1]
+            max2=arrayNumber[0]
+        }
+
+        for(let i=2; i<=arrayNumber.length; i++){
+            if(arrayNumber[i]>max1){
+                max2=max1
+                max1=arrayNumber[i]
+            }else if(arrayNumber[i]>max2){
+                max2=arrayNumber[i]
+            }
+        }
+        return max2
+       }
+       let arrayNumber = [60,40,100,105,45]
+       let result = secondLagestNumber(arrayNumber)
+       console.log(`Second largest number is ${result}`)
+    </script>
+</body>
+</html>
