@@ -1,4 +1,4 @@
-function wordOccurances(inputString){
+function letterOccurances(inputString){
     let result = {}
     for(let char of inputString){
         if (result[char]){
